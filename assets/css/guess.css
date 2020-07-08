@@ -20,11 +20,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6; }
 
 h1 {
   font-size: 4rem;
-  line-height: 1.6;
   font-weight: 900; }
 
 h2 {
@@ -65,7 +65,6 @@ button {
 .guess {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   background: #232C4C;
   position: relative; }
 
@@ -79,7 +78,8 @@ button {
     width: 150px;
     height: 43px;
     top: 35px;
-    left: 35px; }
+    left: 35px;
+    z-index: 100; }
     .game .logo img {
       max-width: 150px;
       height: auto; }
@@ -120,38 +120,47 @@ button {
         .game .welcome .welcome__container button:hover {
           background: #8c7ed2; }
   .game #quiz {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: collapse;
     z-index: 1; }
+    .game #quiz.active {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+      padding: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
     .game #quiz .question__box {
-      width: 0;
-      height: 0;
-      padding: 0;
       color: #fff;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      visibility: hidden;
-      opacity: 0; }
-      .game #quiz .question__box h2 {
-        margin-bottom: 30px; }
+      display: none; }
       .game #quiz .question__box.active {
-        visibility: visible;
-        opacity: 1;
         width: 80%;
         height: auto;
-        padding: 25px; }
+        padding: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: zoomIn;
+        animation: zoomIn;
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s; }
+      .game #quiz .question__box h2 {
+        margin-bottom: 30px; }
       .game #quiz .question__box .question__container {
         width: 100%;
         max-width: 800px;
@@ -220,27 +229,18 @@ button {
   .game .score__box {
     color: #fff; }
   .game .results {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
     background: #232C4C;
     color: #fff;
-    visibility: hidden;
-    opacity: 0;
     -webkit-transition: opacity 1.5s linear;
     -o-transition: opacity 1.5s linear;
-    transition: opacity 1.5s linear; }
+    transition: opacity 1.5s linear;
+    display: none; }
     .game .results.active {
-      visibility: visible;
-      opacity: 1; }
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      visibility: visible; }
     .game .results .results__container {
       max-width: 1000px;
       width: 100%;
@@ -260,14 +260,20 @@ button {
         padding: 20px;
         margin-bottom: 30px;
         color: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        display: none;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
+        .game .results .results__container .score__container.active {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-animation: zoomIn;
+          animation: zoomIn;
+          -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s; }
         .game .results .results__container .score__container h2 {
           color: #fff; }
         .game .results .results__container .score__container .scorebox {
@@ -286,22 +292,26 @@ button {
           font-weight: 600;
           padding: 15px 30px; }
       .game .results .results__container .questions__container {
-        width: 100%;
-        max-height: 500px;
-        overflow: scroll; }
+        width: 100%; }
+        .game .results .results__container .questions__container.active {
+          -webkit-animation: flipInX;
+          animation: flipInX;
+          -webkit-animation-duration: 2s;
+          animation-duration: 2s; }
       .game .results .results__container button {
         background: #5f53c0; }
         .game .results .results__container button:hover {
           background: #8c7ed2; }
       .game .results .results__container .result__question {
+        background: #2C3553;
         max-width: 100%;
-        padding: 5px 40px 5px 15px;
-        margin: 50px auto;
+        padding: 25px 40px 25px 25px;
+        margin: 30px auto;
         border-left: 4px solid;
         text-align: left;
         position: relative; }
         .game .results .results__container .result__question:first-child {
-          margin: 0 auto 50px auto; }
+          margin: 0 auto 30px auto; }
         .game .results .results__container .result__question:after {
           position: absolute;
           content: '';
@@ -331,14 +341,14 @@ button {
       .game .results .results__container .correct__answer {
         margin: 10px 0 0 0; }
   .game .progress__bar {
-    width: 100%;
+    display: none;
     height: 15px;
     background: #232C4C;
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out; }
-    .game .progress__bar .block {
-      width: 0;
+    .game .progress__bar.block {
+      display: block;
       height: 15px;
       border-radius: 0 10px 10px 0;
       background-image: -webkit-linear-gradient(315deg, #321575 0%, #8D0B93 50%, #FF057C 100%);

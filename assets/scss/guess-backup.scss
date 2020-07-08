@@ -107,7 +107,6 @@ button {
     height: 43px;
     top: 35px;
     left: 35px;
-    z-index: 100;
 
     img {
       max-width: 150px;
@@ -175,23 +174,35 @@ button {
     }
 
     .question__box {
+      width: 0;
+      height: 0;
+      padding: 0;
       color: #fff;
       align-items: center;
       flex-wrap: wrap;
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      // animation-delay: 3s;
+      // transition: opacity 2.5s linear;
 
-      &.active {
-        width: 80%;
-        height: auto;
-        padding: 25px;
-        display: flex;
-        animation: zoomIn;
-        animation-duration: 1.5s;
-      }
 
       h2 {
         margin-bottom: 30px;
       }
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        width: 80%;
+        height: auto;
+        padding: 25px;
+        // animation-delay: 3s;
+        // transition: opacity 2.5s linear;
+      }
+
+      // &.animated {
+      //   animation: slideInRight 1s;
+      // }
 
       .question__container {
         width: 100%;
@@ -289,15 +300,19 @@ button {
 
 
   // Results Screen
-
   .results {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: collapse;
     background: $darkBlue;
     color: #fff;
     transition: opacity 1.5s linear;
-    display: none;
 
     &.active {
-      display: block;
       width: 100%;
       height: 100%;
       opacity: 1;
@@ -318,16 +333,14 @@ button {
         width: 60%;
         padding: 20px;
         margin-bottom: 30px;
+        // background: #eee;
+        // color: #333;
         color: #fff;
-        display: none;
+        // box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+        // border-radius: 25px;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
-        &.active {
-          display: flex;
-          animation: zoomIn;
-          animation-duration: 1.5s;
-        }
 
         h2 {
           color: #fff;
@@ -359,11 +372,8 @@ button {
 
       .questions__container {
         width: 100%;
-
-        &.active {
-          animation: flipInX;
-          animation-duration: 2s;
-        }
+        // max-height: 500px;
+        // overflow: scroll;
       }
 
       button {
