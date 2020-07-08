@@ -313,6 +313,9 @@ button {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
+      @media all and (max-width: 485px) {
+        .game .results .results__container {
+          padding: 100px 25px 20px 25px; } }
       .game .results .results__container .score__container {
         width: 60%;
         padding: 20px;
@@ -324,6 +327,9 @@ button {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
+        @media all and (max-width: 1024px) {
+          .game .results .results__container .score__container {
+            width: 100%; } }
         .game .results .results__container .score__container.active {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -340,7 +346,7 @@ button {
           .game .results .results__container .score__container .scorebox h2 {
             padding-bottom: 3px; }
         .game .results .results__container .score__container p {
-          width: auto;
+          width: 100%;
           display: inline-block;
           margin-top: 20px; }
         .game .results .results__container .score__container button {
@@ -372,6 +378,9 @@ button {
         border-left: 4px solid;
         text-align: left;
         position: relative; }
+        @media all and (max-width: 768px) {
+          .game .results .results__container .result__question {
+            padding: 55px 25px 25px 25px; } }
         .game .results .results__container .result__question:first-child {
           margin: 0 auto 30px auto; }
         .game .results .results__container .result__question:after {
@@ -384,6 +393,13 @@ button {
           top: 50%;
           margin-top: -15px;
           right: 30px; }
+          @media all and (max-width: 768px) {
+            .game .results .results__container .result__question:after {
+              top: 30px;
+              left: 30px;
+              right: inherit;
+              width: 25px;
+              height: 25px; } }
         .game .results .results__container .result__question.correct {
           border-color: #27c190; }
           .game .results .results__container .result__question.correct:after {
@@ -394,12 +410,17 @@ button {
             background: url(/assets/img/cross.svg); }
         .game .results .results__container .result__question .resultbox {
           max-width: 85%; }
+          @media all and (max-width: 768px) {
+            .game .results .results__container .result__question .resultbox {
+              max-width: 100%; } }
           .game .results .results__container .result__question .resultbox span {
             font-size: 1.8rem;
             line-height: 1.6;
-            font-weight: 600; }
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: block; }
           .game .results .results__container .result__question .resultbox p {
-            margin-top: 20px; }
+            margin-bottom: 10px; }
       .game .results .results__container .correct__answer {
         margin: 10px 0 0 0; }
   .game .progress__bar {

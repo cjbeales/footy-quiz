@@ -401,6 +401,10 @@ button {
       flex-wrap: wrap;
       justify-content: center;
 
+      @media all and (max-width: 485px) {
+        padding: 100px 25px 20px 25px;
+      }
+
       .score__container {
         width: 60%;
         padding: 20px;
@@ -409,6 +413,10 @@ button {
         display: none;
         flex-wrap: wrap;
         justify-content: center;
+
+        @media all and (max-width: 1024px) {
+          width: 100%;
+        }
 
         &.active {
           display: flex;
@@ -430,7 +438,7 @@ button {
         }
 
         p {
-          width: auto;
+          width: 100%;
           display: inline-block;
           margin-top: 20px;
         }
@@ -471,10 +479,13 @@ button {
         max-width: 100%;
         padding: 25px 40px 25px 25px;
         margin: 30px auto;
-        // border-radius: 25px;
         border-left: 4px solid;
         text-align: left;
         position: relative;
+
+        @media all and (max-width: 768px) {
+          padding: 55px 25px 25px 25px;
+        }
 
         &:first-child {
           margin: 0 auto 30px auto;
@@ -490,6 +501,14 @@ button {
           top: 50%;
           margin-top: -15px;
           right: 30px;
+
+          @media all and (max-width: 768px) {
+            top: 30px;
+            left: 30px;
+            right: inherit;
+            width: 25px;
+            height: 25px;
+          }
         }
 
         &.correct {
@@ -511,14 +530,20 @@ button {
         .resultbox {
           max-width: 85%;
 
+          @media all and (max-width: 768px) {
+            max-width: 100%;
+          }
+
           span {
             font-size: 1.8rem;
             line-height: 1.6;
             font-weight: 600;
+            margin-bottom: 25px;
+            display: block;
           }
 
           p {
-            margin-top: 20px;
+            margin-bottom: 10px;
           }
         }
       }
