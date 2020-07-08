@@ -85,6 +85,25 @@ p {
   }
 }
 
+
+@media all and (max-width: 485px) {
+  h1 {
+    font-size: 3rem
+  }
+
+  h2 {
+    font-size: 2.4rem
+  }
+
+  h3 {
+    font-size: 2rem
+  }
+
+  h4 {
+    font-size: 1.8rem
+  }
+}
+
 button {
   background: $purple;
   color: #fff;
@@ -97,9 +116,16 @@ button {
   letter-spacing: .5px;
   @include transition(.3s);
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background: $lightPurple;
     @include transition(.3s);
+  }
+
+  @media all and (max-width: 485px) {
+    width: 100%;
+    padding: 17px 30px;
   }
 }
 
@@ -228,6 +254,10 @@ button {
           justify-content: flex-start;
           margin: 40px auto;
           max-width: 400px;
+
+          @media all and (max-width: 485px) {
+            margin: 40px auto 20px auto;
+          }
         }
 
       }
@@ -248,6 +278,10 @@ button {
         @media all and (max-width: 1024px) {
           width: 100%;
         }
+
+        @media all and (max-width: 485px) {
+          padding: 0;
+        }
       }
     }
   }
@@ -259,6 +293,14 @@ button {
     height: 86px;
     margin: 10px 0;
     cursor: pointer;
+
+    @media all and (max-width: 485px) {
+      width: 255px;
+      max-width: 255px;
+      height: 70px;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
   }
 
   .options label {
@@ -270,7 +312,7 @@ button {
     border-bottom: 6px solid $purple;
     color: $purple;
     margin: 10px 0;
-    padding: 20px;
+    padding: 12px 20px;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 40px;
@@ -279,6 +321,12 @@ button {
     box-sizing: border-box;
     cursor: pointer;
     @include transition(.2s);
+
+    @media all and (max-width: 485px) {
+      max-width: 255px;
+      width: 255px;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
 
     &:after {
       content: '';
@@ -383,6 +431,11 @@ button {
           margin-top: 30px;
           font-weight: 600;
           padding: 15px 30px;
+
+          @media all and (max-width: 485px) {
+            width: 100%;
+            padding: 17px 30px;
+          }
         }
       }
 

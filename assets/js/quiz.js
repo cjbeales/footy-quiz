@@ -1,7 +1,7 @@
 // Get JSON
 var data = [{
   "questionindex": 0,
-  "question": "Which player scored the fastest hat-trick in the Premier League?",
+  "question": "Which player scored the fastest hat-trick the Premier League history?",
   "correctAnswer": "Sadio Mane",
   "answers": ["Cristiano Ronaldo", "Sadio Mane", "Harry Kane"]
 }, {
