@@ -132,13 +132,17 @@ button {
     .game .welcome .welcome__container {
       max-width: 1200px;
       margin: 0 auto;
-      text-align: center; }
+      text-align: center;
+      padding: 0 25px; }
       .game .welcome .welcome__container .welcome__text {
         width: 100%;
         display: block;
         margin-bottom: 20px; }
+        .game .welcome .welcome__container .welcome__text h1 {
+          line-height: 1.4; }
         .game .welcome .welcome__container .welcome__text h3 {
-          margin-top: 15px; }
+          margin-top: 25px;
+          opacity: .75; }
       .game .welcome .welcome__container button {
         background: #5f53c0; }
         .game .welcome .welcome__container button:hover {
@@ -168,6 +172,11 @@ button {
         .game #quiz.active {
           padding: 100px 20px 50px 20px;
           width: 100vw; } }
+      @media all and (max-width: 485px) {
+        .game #quiz.active {
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start; } }
     .game #quiz .question__box {
       color: #fff;
       -webkit-box-align: center;

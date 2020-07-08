@@ -176,14 +176,20 @@ button {
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
+      padding: 0 25px;
 
       .welcome__text {
         width: 100%;
         display: block;
         margin-bottom: 20px;
 
+        h1 {
+          line-height: 1.4;
+        }
+
         h3 {
-          margin-top: 15px;
+          margin-top: 25px;
+          opacity: .75;
         }
       }
 
@@ -218,6 +224,10 @@ button {
       @media all and (max-width: 1024px) {
         padding: 100px 20px 50px 20px;
         width: 100vw;
+      }
+
+      @media all and (max-width: 485px) {
+        align-items: flex-start;
       }
     }
 
