@@ -67,7 +67,23 @@ p {
   opacity: .75;
 }
 
-@media all and (min-width: 960px) {}
+@media all and (max-width: 1024px) {
+  h1 {
+    font-size: 3.4rem
+  }
+
+  h2 {
+    font-size: 2.8rem
+  }
+
+  h3 {
+    font-size: 2rem
+  }
+
+  h4 {
+    font-size: 1.8rem
+  }
+}
 
 button {
   background: $purple;
@@ -172,6 +188,11 @@ button {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media all and (max-width: 1024px) {
+        padding: 100px 20px 50px 20px;
+        width: 100vw;
+      }
     }
 
     .question__box {
@@ -180,28 +201,18 @@ button {
       flex-wrap: wrap;
       display: none;
 
-      &.active {
-        width: 80%;
-        height: auto;
-        padding: 25px;
-        display: flex;
-        animation: zoomIn;
-        animation-duration: 1.5s;
-      }
-
       h2 {
         margin-bottom: 30px;
       }
 
       .question__container {
-        width: 100%;
+        width: auto;
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
 
 
         .question {
-          display: block;
           width: 100%;
         }
 
@@ -213,13 +224,31 @@ button {
           }
         }
 
-      }
-    }
+        .options {
+          justify-content: flex-start;
+          margin: 40px auto;
+          max-width: 400px;
+        }
 
-    .options {
-      justify-content: flex-start;
-      margin: 40px auto;
-      max-width: 400px;
+      }
+
+      // ACTIVE
+      &.active {
+        width: 80%;
+        height: auto;
+        padding: 25px;
+        display: flex;
+
+        .question,
+        .options {
+          animation: zoomIn;
+          animation-duration: 1.5s;
+        }
+
+        @media all and (max-width: 1024px) {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -440,14 +469,13 @@ button {
 
   .progress__bar {
     display: none;
-    // width: 100%;
     height: 15px;
     background: $darkBlue;
     @include transition(1s);
 
     &.block {
       display: block;
-      // width: 0;
+      max-width: 100%;
       height: 15px;
       border-radius: 0 10px 10px 0;
       background-image: linear-gradient(-225deg, #321575 0%, #8D0B93 50%, #FF057C 100%);

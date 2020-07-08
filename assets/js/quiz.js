@@ -1,70 +1,63 @@
 // Get JSON
 var data = [{
-    "questionindex": 0,
-    "question": "Which player scored the fastest hat-trick in the Premier League?",
-    "correctAnswer": "Sadio Mane",
-    "answers": ["Cristiano Ronaldo", "Sadio Mane", "Harry Kane"]
-  }
-  // ,{
-  //   "questionindex": 1,
-  //   "question": "Which player has made the most Premier League appearances (653)?",
-  //   "correctAnswer": "Gareth Barry",
-  //   "answers": ["Ryan Giggs", "Frank Lampard", "Gareth Barry"]
-  // }, {
-  //   "questionindex": 2,
-  //   "question": "Which former Tottenham manager has competed in the Dakar Rally?",
-  //   "correctAnswer": "Andre Villas-Boas",
-  //   "answers": ["Andre Villas-Boas", "Harry Redknapp", "Martin Jol"]
-  // }, {
-  //   "questionindex": 3,
-  //   "question": "English rock star Elton John was twice the owner of which football club?",
-  //   "correctAnswer": "Watford",
-  //   "answers": ["Wigan Athletic", "Arsenal", "Watford"]
-  // }, {
-  //   "questionindex": 4,
-  //   "question": "Which club has won the most Champions League titles?",
-  //   "correctAnswer": "Real Madrid",
-  //   "answers": ["FC Barcelona", "AC Milan", "Real Madrid"]
-  // }, {
-  //   "questionindex": 5,
-  //   "question": "Which portuguese island is Cristiano Ronaldo from?",
-  //   "correctAnswer": "Madeira",
-  //   "answers": ["Madeira", "Santa Maria", "Porto Santo"]
-  // }, {
-  //   "questionindex": 6,
-  //   "question": "How many clubs competed in the inaugural Premier League season?",
-  //   "correctAnswer": "22",
-  //   "answers": ["22", "20", "19"]
-  // }, {
-  //   "questionindex": 7,
-  //   "question": "Who is Manchester Uniteds top premier league goal scorer?",
-  //   "correctAnswer": "Wayne Rooney",
-  //   "answers": ["Sir Bobby Charlton", "Wayne Rooney", "David Beckham"]
-  // }, {
-  //   "questionindex": 8,
-  //   "question": "Which of the following player scored a hat-trick during their Manchester United debut?",
-  //   "correctAnswer": "Wayne Rooney",
-  //   "answers": ["Cristiano Ronaldo", "Robin Van Persie", "Wayne Rooney"]
-  // }, {
-  //   "questionindex": 9,
-  //   "question": "From which club did Chelsea sign Didier Drogba?",
-  //   "correctAnswer": "Marseille",
-  //   "answers": ["Juventus", "Marseille", "Ajax"]
-  // }]
-]
+  "questionindex": 0,
+  "question": "Which player scored the fastest hat-trick in the Premier League?",
+  "correctAnswer": "Sadio Mane",
+  "answers": ["Cristiano Ronaldo", "Sadio Mane", "Harry Kane"]
+}, {
+  "questionindex": 1,
+  "question": "Which player has made the most Premier League appearances (653)?",
+  "correctAnswer": "Gareth Barry",
+  "answers": ["Ryan Giggs", "Frank Lampard", "Gareth Barry"]
+}, {
+  "questionindex": 2,
+  "question": "Which former Tottenham manager has competed in the Dakar Rally?",
+  "correctAnswer": "Andre Villas-Boas",
+  "answers": ["Andre Villas-Boas", "Harry Redknapp", "Martin Jol"]
+}, {
+  "questionindex": 3,
+  "question": "English rock star Elton John was twice the owner of which football club?",
+  "correctAnswer": "Watford",
+  "answers": ["Wigan Athletic", "Arsenal", "Watford"]
+}, {
+  "questionindex": 4,
+  "question": "Which club has won the most Champions League titles?",
+  "correctAnswer": "Real Madrid",
+  "answers": ["FC Barcelona", "AC Milan", "Real Madrid"]
+}, {
+  "questionindex": 5,
+  "question": "Which portuguese island is Cristiano Ronaldo from?",
+  "correctAnswer": "Madeira",
+  "answers": ["Madeira", "Santa Maria", "Porto Santo"]
+}, {
+  "questionindex": 6,
+  "question": "How many clubs competed in the inaugural Premier League season?",
+  "correctAnswer": "22",
+  "answers": ["22", "20", "19"]
+}, {
+  "questionindex": 7,
+  "question": "Who is Manchester Uniteds top premier league goal scorer?",
+  "correctAnswer": "Wayne Rooney",
+  "answers": ["Sir Bobby Charlton", "Wayne Rooney", "David Beckham"]
+}, {
+  "questionindex": 8,
+  "question": "Which of the following player scored a hat-trick during their Manchester United debut?",
+  "correctAnswer": "Wayne Rooney",
+  "answers": ["Cristiano Ronaldo", "Robin Van Persie", "Wayne Rooney"]
+}, {
+  "questionindex": 9,
+  "question": "From which club did Chelsea sign Didier Drogba?",
+  "correctAnswer": "Marseille",
+  "answers": ["Juventus", "Marseille", "Ajax"]
+}]
+// ]
 
 var qActive = document.querySelector('.question__box.active');
-
 var activeQuestion = {}
-
 var yourAnswers = [];
-
 var gamebox = document.getElementById("gameBox");
 var quizbox = document.getElementById("quiz");
-
 var qActive = document.getElementsByClassName(".question__box.active");
-
-
 
 // Welcome page
 var welcome = document.querySelector(".welcome.active");
@@ -77,11 +70,9 @@ function letsBegin() {
   welcome.parentNode.removeChild(welcome);
   quizbox.classList.add('active');
   document.getElementById('0').classList.add('active')
-  // tl.play();
   createBar();
   progbar.classList.add('block');
 }
-
 
 // Progress Bar
 var progbar = document.getElementById("progBar");
@@ -96,6 +87,7 @@ function createBar() {
 function updateBar() {
   var newwidth = barwidth += percentage;
   progbar.style.width = newwidth + "%";
+  console.log(progbar.style.width)
 }
 
 // Quiz Builder
@@ -117,13 +109,11 @@ function updateBar() {
     var node = document.createTextNode(data[i].question);
 
     // Options/Answers
-
     var answers = data[i].answers;
     var options = document.createElement("div");
     options.className = "options";
 
     for (var a = 0; a < answers.length; a++) {
-      // console.log(answers[a]);
       var optionbox = document.createElement("div");
       optionbox.className = "option__box";
       var checkDiv = document.createElement("div");
@@ -145,7 +135,6 @@ function updateBar() {
     // Button
     var submitAnswer = document.createElement("button")
     submitAnswer.className = "submitbtn";
-    // submitAnswer.id = "submitButton";
     submitAnswer.onclick = submitAnswer;
     submitAnswer.innerHTML = "Submit";
 
@@ -172,37 +161,11 @@ function updateBar() {
 
 beginBtn.addEventListener('click', letsBegin);
 
-// var tl = anime.timeline({
-//   easing: 'easeOutExpo',
-//   duration: 750,
-//   autoplay: false
-// });
-
-// tl.add({
-//   targets: '.question__box',
-//   translateX: [400, 0],
-//   opacity: [0, 1],
-//   duration: 1000,
-// });
-
 // Submit Answer
 var results = document.getElementById("quizResults");
 var allbuttons = document.querySelectorAll(".submitbtn");
 
 (function submitButton() {
-
-  // var tl = anime.timeline({
-  //   easing: 'easeOutExpo',
-  //   duration: 750,
-  //   autoplay: false
-  // });
-
-  // tl.add({
-  //   targets: '.question__box',
-  //   translateX: [400, 0],
-  //   opacity: [0, 1],
-  //   duration: 1000,
-  // });
 
   for (var submitbtn of allbuttons) {
     submitbtn.addEventListener('click', function (event) {
@@ -212,26 +175,18 @@ var allbuttons = document.querySelectorAll(".submitbtn");
       var parentClass = parent.classList;
       var nextQ = parent.nextSibling;
 
-      // tl.play();
-
       if (selected != null) {
-
         var selectedAnswer = selected.value;
-
         yourAnswers.push({
           answer: selectedAnswer
         })
-
         if (!selected) {
           alert("Please select an answer!");
         }
-
         if (nextQ) {
           if (selected != null) {
             parent.classList.remove("active");
             nextQ.className = ("question__box active");
-            // nextQ.classList.add('animate__animated');
-            // nextQ.classList.add('animate__zoomIn');
             checkAnswers(parentId, selectedAnswer);
             updateBar();
           }
@@ -250,14 +205,10 @@ var allbuttons = document.querySelectorAll(".submitbtn");
       } else {
         alert("Please select an answer");
       }
-
-      // Code above here
     })
   }
-  updateBar()
+  // updateBar()
 })();
-
-
 
 // Keep Score
 var myScore = 0;
@@ -265,17 +216,13 @@ var myScore = 0;
 function checkAnswers(parentId, selectedAnswer) {
   const parent = event.target.parentNode.parentNode;
   if (data[parentId].correctAnswer == selectedAnswer) {
-    console.log("This is correct")
     myScore += 1;
-    console.log(myScore);
     parent.classList.add("correct");
 
   } else {
-    console.log("Wrong");
     parent.classList.add("wrong");
   }
 }
-
 
 // Results Screen
 
@@ -302,7 +249,6 @@ function displayResults() {
   var scoreTotal = document.createTextNode(myScore + "/" + fullScore);
   var halfScore = fullScore / 2;
 
-
   if (myScore == fullScore) {
     resultsMessage.innerHTML = "Perfect score! Congratulations, you really know your stuff";
   } else if (myScore > halfScore) {
@@ -320,13 +266,10 @@ function displayResults() {
   scoreContainer.appendChild(resetButton);
   resultsContainer.appendChild(scoreContainer);
 
-
   var parentElement = qList.parentNode;
   var qDivContainer = document.createElement("div");
   qDivContainer.className = "questions__container";
   resultsContainer.appendChild(qDivContainer);
-
-
 
   for (i = 0; i < data.length; i++) {
     var qItem = q[i].children[0].innerHTML;
@@ -341,7 +284,6 @@ function displayResults() {
     var incorrectnode = document.createTextNode("Correct answer: " + data[i].correctAnswer);
     var incorrectP = document.createElement("p");
     var incorrectAnswer = document.createTextNode("Your Answer: " + yourAnswers[i].answer);
-
     var correctnode = document.createTextNode("Your answer: " + data[i].correctAnswer);
 
     if (qList[i].className === "question__box correct") {
@@ -366,7 +308,6 @@ function displayResults() {
     document.querySelector('.guess').style.overflow = "scroll";
   }
   resultsContainer.appendChild(qDivContainer);
-
 }
 
 function refresh() {
