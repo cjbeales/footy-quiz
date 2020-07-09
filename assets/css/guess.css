@@ -92,14 +92,6 @@ button {
   background-size: cover;
   background-position: top center;
   position: relative; }
-  .guess:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.65); }
 
 .game {
   width: 100%;
@@ -108,17 +100,17 @@ button {
   .game .logo {
     position: absolute;
     content: '';
-    width: 150px;
+    width: 170px;
     height: 43px;
     top: 35px;
-    left: 35px;
+    left: 20px;
     z-index: 100; }
     @media all and (max-width: 485px) {
       .game .logo {
-        left: 20px;
-        top: 20px; } }
+        left: 15px;
+        top: 30px; } }
     .game .logo img {
-      max-width: 150px;
+      max-width: 170px;
       height: auto; }
       @media all and (max-width: 485px) {
         .game .logo img {
@@ -148,7 +140,8 @@ button {
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
-      padding: 0 25px; }
+      padding: 0 25px;
+      z-index: 10; }
       .game .welcome .welcome__container .welcome__text {
         width: 100%;
         display: block;
@@ -199,7 +192,8 @@ button {
       align-items: center;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      display: none; }
+      display: none;
+      z-index: 10; }
       .game #quiz .question__box h2 {
         margin-bottom: 30px; }
       .game #quiz .question__box .question__container {
@@ -247,7 +241,8 @@ button {
     width: 400px;
     height: 86px;
     margin: 10px 0;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
     @media all and (max-width: 485px) {
       .game .options input[type="radio"] {
         width: 255px;
@@ -263,7 +258,7 @@ button {
     border-bottom: 6px solid #5f53c0;
     color: #5f53c0;
     margin: 10px 0;
-    padding: 12px 20px;
+    padding: 20px;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 40px;
@@ -272,6 +267,7 @@ button {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
@@ -279,6 +275,7 @@ button {
       .game .options label {
         max-width: 255px;
         width: 255px;
+        padding: 12px 20px;
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0); } }
     .game .options label:after {
       content: '';
@@ -340,7 +337,8 @@ button {
         flex-wrap: wrap;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+        z-index: 10; }
         @media all and (max-width: 1024px) {
           .game .results .results__container .score__container {
             width: 100%; } }
@@ -379,7 +377,8 @@ button {
         -webkit-animation: fadeInUp;
         animation: fadeInUp;
         -webkit-animation-duration: 1.5s;
-        animation-duration: 1.5s; }
+        animation-duration: 1.5s;
+        z-index: 10; }
       .game .results .results__container button {
         background: #5f53c0; }
         .game .results .results__container button:hover {
@@ -440,6 +439,7 @@ button {
   .game .progress__bar {
     display: none;
     height: 15px;
+    position: relative;
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out; }
@@ -451,6 +451,7 @@ button {
       background-image: -webkit-linear-gradient(315deg, #232C4C 0%, #4a3e93 50%, #8c7ed2 100%);
       background-image: -o-linear-gradient(315deg, #232C4C 0%, #4a3e93 50%, #8c7ed2 100%);
       background-image: linear-gradient(-225deg, #232C4C 0%, #4a3e93 50%, #8c7ed2 100%);
+      z-index: 100;
       -webkit-transition: all 1s ease-in-out;
       -o-transition: all 1s ease-in-out;
       transition: all 1s ease-in-out; }
