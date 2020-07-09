@@ -50,7 +50,6 @@ var data = [{
   "correctAnswer": "Marseille",
   "answers": ["Juventus", "Marseille", "Ajax"]
 }]
-// ]
 
 var qActive = document.querySelector('.question__box.active');
 var activeQuestion = {}
@@ -306,6 +305,8 @@ function displayResults() {
   if (results.className == "results active") {
     progbar.style.display = "none";
     document.querySelector('.guess').style.overflow = "scroll";
+    document.querySelector('.guess').style.height = "100%";
+    document.querySelector('.game').style.height = "100%";
   }
   resultsContainer.appendChild(qDivContainer);
 }

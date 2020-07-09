@@ -1,5 +1,3 @@
-@import "animate.css";
-
 * {
   box-sizing: border-box;
 }
@@ -132,9 +130,20 @@ button {
 .guess {
   width: 100vw;
   height: 100vh;
-  // overflow: hidden;
-  background: $darkBlue;
+  background: url(/assets/img/pitch-bg.jpg)no-repeat;
+  background-size: cover;
+  background-position: top center;
   position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .65);
+  }
 }
 
 .game {
@@ -163,7 +172,7 @@ button {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: $darkBlue;
+    // background: $darkBlue;
     color: #fff;
     @include transition(.3s);
 
@@ -256,7 +265,7 @@ button {
           margin-bottom: 30px;
 
           h3 {
-            color: #8D97BE;
+            opacity: .75;
           }
         }
 
@@ -378,7 +387,7 @@ button {
   // Results Screen
 
   .results {
-    background: $darkBlue;
+    // background: $darkBlue;
     color: #fff;
     transition: opacity 1.5s linear;
     display: none;
@@ -420,8 +429,8 @@ button {
 
         &.active {
           display: flex;
-          animation: zoomIn;
-          animation-duration: 1.5s;
+          animation: fadeIn;
+          animation-duration: 2s;
         }
 
         h2 {
@@ -459,11 +468,8 @@ button {
 
       .questions__container {
         width: 100%;
-
-        &.active {
-          animation: flipInX;
-          animation-duration: 2s;
-        }
+        animation: fadeInUp;
+        animation-duration: 1.5s;
       }
 
       button {
@@ -475,7 +481,8 @@ button {
       }
 
       .result__question {
-        background: #2C3553;
+        // background: #2C3553;
+        background: $darkBlue;
         max-width: 100%;
         padding: 25px 40px 25px 25px;
         margin: 30px auto;
@@ -558,7 +565,6 @@ button {
   .progress__bar {
     display: none;
     height: 15px;
-    background: $darkBlue;
     @include transition(1s);
 
     &.block {
@@ -566,9 +572,101 @@ button {
       max-width: 100%;
       height: 15px;
       border-radius: 0 10px 10px 0;
-      background-image: linear-gradient(-225deg, #321575 0%, #8D0B93 50%, #FF057C 100%);
+      background-image: linear-gradient(-225deg, $darkBlue 0%, $darkPurple 50%, $lightPurple 100%);
       @include transition(1s);
     }
   }
 
+}
+
+// Animations
+
+// FadeIn
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+// Zoomin
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+.animate__zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn
+}
+
+// FadeInUp
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp
 }
