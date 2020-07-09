@@ -160,9 +160,18 @@ button {
     left: 35px;
     z-index: 100;
 
+    @media all and (max-width: 485px) {
+      left: 20px;
+      top: 20px;
+    }
+
     img {
       max-width: 150px;
       height: auto;
+
+      @media all and (max-width: 485px) {
+        max-width: 115px;
+      }
     }
   }
 
@@ -450,6 +459,7 @@ button {
           width: 100%;
           display: inline-block;
           margin-top: 20px;
+          line-height: 1.6;
         }
 
         button {
