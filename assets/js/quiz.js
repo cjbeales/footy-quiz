@@ -86,7 +86,6 @@ function createBar() {
 function updateBar() {
   var newwidth = barwidth += percentage;
   progbar.style.width = newwidth + "%";
-  console.log(progbar.style.width)
 }
 
 // Quiz Builder
