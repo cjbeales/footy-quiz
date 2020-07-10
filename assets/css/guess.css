@@ -82,7 +82,7 @@ button {
     transition: all 0.3s ease-in-out; }
   @media all and (max-width: 485px) {
     button {
-      width: 100%;
+      width: 90%;
       padding: 17px 30px; } }
 
 .guess {
@@ -369,7 +369,7 @@ button {
           padding: 15px 30px; }
           @media all and (max-width: 485px) {
             .game .results .results__container .score__container button {
-              width: 100%;
+              width: 80%;
               padding: 17px 30px; } }
       .game .results .results__container .questions__container {
         width: 100%;
