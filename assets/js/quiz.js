@@ -1,55 +1,57 @@
 // Get JSON
 var data = [{
-  "questionindex": 0,
-  "question": "Which player scored the fastest hat-trick the Premier League history?",
-  "correctAnswer": "Sadio Mane",
-  "answers": ["Cristiano Ronaldo", "Sadio Mane", "Harry Kane"]
-}, {
-  "questionindex": 1,
-  "question": "Which player has made the most Premier League appearances (653)?",
-  "correctAnswer": "Gareth Barry",
-  "answers": ["Ryan Giggs", "Frank Lampard", "Gareth Barry"]
-}, {
-  "questionindex": 2,
-  "question": "Which former Tottenham manager has competed in the Dakar Rally?",
-  "correctAnswer": "Andre Villas-Boas",
-  "answers": ["Andre Villas-Boas", "Harry Redknapp", "Martin Jol"]
-}, {
-  "questionindex": 3,
-  "question": "English rock star Elton John was twice the owner of which football club?",
-  "correctAnswer": "Watford",
-  "answers": ["Wigan Athletic", "Arsenal", "Watford"]
-}, {
-  "questionindex": 4,
-  "question": "Which club has won the most Champions League titles?",
-  "correctAnswer": "Real Madrid",
-  "answers": ["FC Barcelona", "AC Milan", "Real Madrid"]
-}, {
-  "questionindex": 5,
-  "question": "Which portuguese island is Cristiano Ronaldo from?",
-  "correctAnswer": "Madeira",
-  "answers": ["Madeira", "Santa Maria", "Porto Santo"]
-}, {
-  "questionindex": 6,
-  "question": "How many clubs competed in the inaugural Premier League season?",
-  "correctAnswer": "22",
-  "answers": ["22", "20", "19"]
-}, {
-  "questionindex": 7,
-  "question": "Who is Manchester Uniteds top premier league goal scorer?",
-  "correctAnswer": "Wayne Rooney",
-  "answers": ["Sir Bobby Charlton", "Wayne Rooney", "David Beckham"]
-}, {
-  "questionindex": 8,
-  "question": "Which of the following player scored a hat-trick during their Manchester United debut?",
-  "correctAnswer": "Wayne Rooney",
-  "answers": ["Cristiano Ronaldo", "Robin Van Persie", "Wayne Rooney"]
-}, {
-  "questionindex": 9,
-  "question": "From which club did Chelsea sign Didier Drogba?",
-  "correctAnswer": "Marseille",
-  "answers": ["Juventus", "Marseille", "Ajax"]
-}]
+    "questionindex": 0,
+    "question": "Which player scored the fastest hat-trick the Premier League history?",
+    "correctAnswer": "Sadio Mane",
+    "answers": ["Cristiano Ronaldo", "Sadio Mane", "Harry Kane"]
+  }
+  // ,{
+  //   "questionindex": 1,
+  //   "question": "Which player has made the most Premier League appearances (653)?",
+  //   "correctAnswer": "Gareth Barry",
+  //   "answers": ["Ryan Giggs", "Frank Lampard", "Gareth Barry"]
+  // }, {
+  //   "questionindex": 2,
+  //   "question": "Which former Tottenham manager has competed in the Dakar Rally?",
+  //   "correctAnswer": "Andre Villas-Boas",
+  //   "answers": ["Andre Villas-Boas", "Harry Redknapp", "Martin Jol"]
+  // }, {
+  //   "questionindex": 3,
+  //   "question": "English rock star Elton John was twice the owner of which football club?",
+  //   "correctAnswer": "Watford",
+  //   "answers": ["Wigan Athletic", "Arsenal", "Watford"]
+  // }, {
+  //   "questionindex": 4,
+  //   "question": "Which club has won the most Champions League titles?",
+  //   "correctAnswer": "Real Madrid",
+  //   "answers": ["FC Barcelona", "AC Milan", "Real Madrid"]
+  // }, {
+  //   "questionindex": 5,
+  //   "question": "Which portuguese island is Cristiano Ronaldo from?",
+  //   "correctAnswer": "Madeira",
+  //   "answers": ["Madeira", "Santa Maria", "Porto Santo"]
+  // }, {
+  //   "questionindex": 6,
+  //   "question": "How many clubs competed in the inaugural Premier League season?",
+  //   "correctAnswer": "22",
+  //   "answers": ["22", "20", "19"]
+  // }, {
+  //   "questionindex": 7,
+  //   "question": "Who is Manchester Uniteds top premier league goal scorer?",
+  //   "correctAnswer": "Wayne Rooney",
+  //   "answers": ["Sir Bobby Charlton", "Wayne Rooney", "David Beckham"]
+  // }, {
+  //   "questionindex": 8,
+  //   "question": "Which of the following player scored a hat-trick during their Manchester United debut?",
+  //   "correctAnswer": "Wayne Rooney",
+  //   "answers": ["Cristiano Ronaldo", "Robin Van Persie", "Wayne Rooney"]
+  // }, {
+  //   "questionindex": 9,
+  //   "question": "From which club did Chelsea sign Didier Drogba?",
+  //   "correctAnswer": "Marseille",
+  //   "answers": ["Juventus", "Marseille", "Ajax"]
+  // }
+]
 
 var qActive = document.querySelector('.question__box.active');
 var activeQuestion = {}

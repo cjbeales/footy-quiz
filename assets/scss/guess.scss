@@ -426,6 +426,10 @@ button {
           width: 100%;
         }
 
+        @media all and (max-width: 485px) {
+          padding: 30px 10px;
+        }
+
         &.active {
           display: flex;
           animation: fadeIn;

@@ -341,6 +341,9 @@ button {
         @media all and (max-width: 1024px) {
           .game .results .results__container .score__container {
             width: 100%; } }
+        @media all and (max-width: 485px) {
+          .game .results .results__container .score__container {
+            padding: 30px 10px; } }
         .game .results .results__container .score__container.active {
           display: -webkit-box;
           display: -ms-flexbox;
