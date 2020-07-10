@@ -239,7 +239,7 @@ function displayResults() {
   resultsTextDiv.className = "results__text";
   var resultsText = document.createElement("h1");
   resultsText.innerHTML = "Your Score is:"
-  var resultsMessage = document.createElement("p");
+  var resultsMessage = document.createElement("h3");
   var totalScore = document.createElement("div");
   totalScore.className = "scorebox";
   var scoreText = document.createElement("h1");

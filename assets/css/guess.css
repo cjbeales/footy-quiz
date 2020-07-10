@@ -149,8 +149,7 @@ button {
         .game .welcome .welcome__container .welcome__text h1 {
           line-height: 1.4; }
         .game .welcome .welcome__container .welcome__text h3 {
-          margin-top: 25px;
-          opacity: .75; }
+          margin-top: 25px; }
       .game .welcome .welcome__container button {
         background: #5f53c0; }
         .game .welcome .welcome__container button:hover {
@@ -357,11 +356,11 @@ button {
           border-bottom: 2px solid #fff; }
           .game .results .results__container .score__container .scorebox h2 {
             padding-bottom: 3px; }
-        .game .results .results__container .score__container p {
+        .game .results .results__container .score__container h3 {
           width: 100%;
           display: inline-block;
-          margin-top: 20px;
-          line-height: 1.6; }
+          margin-top: 15px;
+          line-height: 1.4; }
         .game .results .results__container .score__container button {
           width: auto;
           display: inline-block;
