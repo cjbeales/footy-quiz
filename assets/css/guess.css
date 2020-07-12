@@ -287,6 +287,9 @@ button {
   .game .options input[type="radio"]:checked + label {
     background: #5f53c0;
     border-color: #fff;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
     color: #fff; }
   .game .options input[type="radio"]:hover + label {
     background: #5f53c0;
@@ -298,6 +301,9 @@ button {
   .game .score__box {
     color: #fff; }
   .game .results {
+    background: url(/assets/img/results-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
     color: #fff;
     -webkit-transition: opacity 1.5s linear;
     -o-transition: opacity 1.5s linear;
@@ -389,15 +395,15 @@ button {
         background: #232C4C;
         max-width: 100%;
         padding: 25px 40px 25px 25px;
-        margin: 30px auto;
-        border-left: 4px solid;
+        margin: 0 auto;
+        border-bottom: 2px solid #4a3e93;
         text-align: left;
         position: relative; }
         @media all and (max-width: 768px) {
           .game .results .results__container .result__question {
             padding: 55px 25px 25px 25px; } }
         .game .results .results__container .result__question:first-child {
-          margin: 0 auto 30px auto; }
+          margin: 0 auto; }
         .game .results .results__container .result__question:after {
           position: absolute;
           content: '';
@@ -415,14 +421,26 @@ button {
               right: inherit;
               width: 25px;
               height: 25px; } }
-        .game .results .results__container .result__question.correct {
-          border-color: #27c190; }
-          .game .results .results__container .result__question.correct:after {
-            background: url(/assets/img/tick.svg); }
-        .game .results .results__container .result__question.incorrect {
-          border-color: #ff0844; }
-          .game .results .results__container .result__question.incorrect:after {
-            background: url(/assets/img/cross.svg); }
+        .game .results .results__container .result__question.correct:before {
+          position: absolute;
+          width: 4px;
+          height: calc(100% + 2px);
+          top: 0;
+          left: 0;
+          background: #27c190;
+          content: ''; }
+        .game .results .results__container .result__question.correct:after {
+          background: url(/assets/img/tick.svg); }
+        .game .results .results__container .result__question.incorrect:before {
+          position: absolute;
+          width: 4px;
+          height: calc(100% + 2px);
+          top: 0;
+          left: 0;
+          background: #ff0844;
+          content: ''; }
+        .game .results .results__container .result__question.incorrect:after {
+          background: url(/assets/img/cross.svg); }
         .game .results .results__container .result__question .resultbox {
           max-width: 85%; }
           @media all and (max-width: 768px) {

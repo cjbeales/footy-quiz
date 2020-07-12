@@ -366,6 +366,7 @@ button {
   .options input[type="radio"]:checked+label {
     background: $purple;
     border-color: #fff;
+    transform: scale(1.15);
     color: #fff;
   }
 
@@ -386,6 +387,9 @@ button {
   // Results Screen
 
   .results {
+    background: url(/assets/img/results-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
     color: #fff;
     transition: opacity 1.5s linear;
     display: none;
@@ -486,12 +490,11 @@ button {
       }
 
       .result__question {
-        // background: #2C3553;
         background: $darkBlue;
         max-width: 100%;
         padding: 25px 40px 25px 25px;
-        margin: 30px auto;
-        border-left: 4px solid;
+        margin: 0 auto;
+        border-bottom: 2px solid $darkPurple;
         text-align: left;
         position: relative;
 
@@ -500,7 +503,7 @@ button {
         }
 
         &:first-child {
-          margin: 0 auto 30px auto;
+          margin: 0 auto;
         }
 
         &:after {
@@ -524,7 +527,15 @@ button {
         }
 
         &.correct {
-          border-color: #27c190;
+          &:before {
+            position: absolute;
+            width: 4px;
+            height: calc(100% + 2px);
+            top: 0;
+            left: 0;
+            background: #27c190;
+            content: '';
+          }
 
           &:after {
             background: url(/assets/img/tick.svg);
@@ -532,7 +543,15 @@ button {
         }
 
         &.incorrect {
-          border-color: #ff0844;
+          &:before {
+            position: absolute;
+            width: 4px;
+            height: calc(100% + 2px);
+            top: 0;
+            left: 0;
+            background: #ff0844;
+            content: '';
+          }
 
           &:after {
             background: url(/assets/img/cross.svg);
