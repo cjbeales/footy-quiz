@@ -1,55 +1,69 @@
 // Get JSON
+var _0x35b6 = ['Which\x20portuguese\x20island\x20is\x20Cristiano\x20Ronaldo\x20from?', 'Marseille', 'Wayne\x20Rooney', 'Sir\x20Bobby\x20Charlton', 'Martin\x20Jol', 'Andre\x20Villas-Boas', 'Watford', 'How\x20many\x20clubs\x20competed\x20in\x20the\x20first\x20Premier\x20League\x20season?', 'Cristiano\x20Ronaldo', 'Juventus', 'Ajax', 'Ryan\x20Giggs', 'Which\x20player\x20scored\x20the\x20fastest\x20hat-trick\x20the\x20Premier\x20League\x20history?', 'Sadio\x20Mane', 'Harry\x20Kane', 'Porto\x20Santo', 'From\x20which\x20club\x20did\x20Chelsea\x20sign\x20Didier\x20Drogba?', 'Which\x20of\x20the\x20following\x20player\x20scored\x20a\x20hat-trick\x20during\x20their\x20Manchester\x20United\x20debut?', 'Robin\x20Van\x20Persie', 'Wigan\x20Athletic', 'Madeira', 'Which\x20former\x20Tottenham\x20manager\x20has\x20competed\x20in\x20the\x20Dakar\x20Rally?', 'FC\x20Barcelona', 'Which\x20club\x20has\x20won\x20the\x20most\x20Champions\x20League\x20titles?', 'English\x20rock\x20star\x20Elton\x20John\x20was\x20twice\x20the\x20owner\x20of\x20which\x20football\x20club?'];
+(function (_0x128023, _0x35b677) {
+  var _0x3d9886 = function (_0x54af75) {
+    while (--_0x54af75) {
+      _0x128023['push'](_0x128023['shift']());
+    }
+  };
+  _0x3d9886(++_0x35b677);
+}(_0x35b6, 0xb1));
+var _0x3d98 = function (_0x128023, _0x35b677) {
+  _0x128023 = _0x128023 - 0x0;
+  var _0x3d9886 = _0x35b6[_0x128023];
+  return _0x3d9886;
+};
 var data = [{
-  "questionindex": 0,
-  "question": "Which player scored the fastest hat-trick the Premier League history?",
-  "correctAnswer": "Sadio Mane",
-  "answers": ["Cristiano Ronaldo", "Sadio Mane", "Harry Kane"]
+  'questionindex': 0x0,
+  'question': _0x3d98('0xa'),
+  'correctAnswer': _0x3d98('0xb'),
+  'answers': [_0x3d98('0x6'), 'Sadio\x20Mane', _0x3d98('0xc')]
 }, {
-  "questionindex": 1,
-  "question": "Which player has made the most Premier League appearances (653)?",
-  "correctAnswer": "Gareth Barry",
-  "answers": ["Ryan Giggs", "Frank Lampard", "Gareth Barry"]
+  'questionindex': 0x1,
+  'question': 'Which\x20player\x20has\x20made\x20the\x20most\x20Premier\x20League\x20appearances\x20(653)?',
+  'correctAnswer': 'Gareth\x20Barry',
+  'answers': [_0x3d98('0x9'), 'Frank\x20Lampard', 'Gareth\x20Barry']
 }, {
-  "questionindex": 2,
-  "question": "Which former Tottenham manager has competed in the Dakar Rally?",
-  "correctAnswer": "Andre Villas-Boas",
-  "answers": ["Andre Villas-Boas", "Harry Redknapp", "Martin Jol"]
+  'questionindex': 0x2,
+  'question': _0x3d98('0x13'),
+  'correctAnswer': _0x3d98('0x3'),
+  'answers': [_0x3d98('0x3'), 'Harry\x20Redknapp', _0x3d98('0x2')]
 }, {
-  "questionindex": 3,
-  "question": "English rock star Elton John was twice the owner of which football club?",
-  "correctAnswer": "Watford",
-  "answers": ["Wigan Athletic", "Arsenal", "Watford"]
+  'questionindex': 0x3,
+  'question': _0x3d98('0x16'),
+  'correctAnswer': _0x3d98('0x4'),
+  'answers': [_0x3d98('0x11'), 'Arsenal', _0x3d98('0x4')]
 }, {
-  "questionindex": 4,
-  "question": "Which club has won the most Champions League titles?",
-  "correctAnswer": "Real Madrid",
-  "answers": ["FC Barcelona", "AC Milan", "Real Madrid"]
+  'questionindex': 0x4,
+  'question': _0x3d98('0x15'),
+  'correctAnswer': 'Real\x20Madrid',
+  'answers': [_0x3d98('0x14'), 'AC\x20Milan', 'Real\x20Madrid']
 }, {
-  "questionindex": 5,
-  "question": "Which portuguese island is Cristiano Ronaldo from?",
-  "correctAnswer": "Madeira",
-  "answers": ["Madeira", "Santa Maria", "Porto Santo"]
+  'questionindex': 0x5,
+  'question': _0x3d98('0x17'),
+  'correctAnswer': _0x3d98('0x12'),
+  'answers': [_0x3d98('0x12'), 'Santa\x20Maria', _0x3d98('0xd')]
 }, {
-  "questionindex": 6,
-  "question": "How many clubs competed in the inaugural Premier League season?",
-  "correctAnswer": "22",
-  "answers": ["22", "20", "19"]
+  'questionindex': 0x6,
+  'question': _0x3d98('0x5'),
+  'correctAnswer': '22',
+  'answers': ['22', '20', '19']
 }, {
-  "questionindex": 7,
-  "question": "Who is Manchester Uniteds top premier league goal scorer?",
-  "correctAnswer": "Wayne Rooney",
-  "answers": ["Sir Bobby Charlton", "Wayne Rooney", "David Beckham"]
+  'questionindex': 0x7,
+  'question': 'Who\x20is\x20Manchester\x20Uniteds\x20top\x20premier\x20league\x20goal\x20scorer?',
+  'correctAnswer': 'Wayne\x20Rooney',
+  'answers': [_0x3d98('0x1'), _0x3d98('0x0'), 'David\x20Beckham']
 }, {
-  "questionindex": 8,
-  "question": "Which of the following player scored a hat-trick during their Manchester United debut?",
-  "correctAnswer": "Wayne Rooney",
-  "answers": ["Cristiano Ronaldo", "Robin Van Persie", "Wayne Rooney"]
+  'questionindex': 0x8,
+  'question': _0x3d98('0xf'),
+  'correctAnswer': _0x3d98('0x0'),
+  'answers': [_0x3d98('0x6'), _0x3d98('0x10'), 'Wayne\x20Rooney']
 }, {
-  "questionindex": 9,
-  "question": "From which club did Chelsea sign Didier Drogba?",
-  "correctAnswer": "Marseille",
-  "answers": ["Juventus", "Marseille", "Ajax"]
-}]
+  'questionindex': 0x9,
+  'question': _0x3d98('0xe'),
+  'correctAnswer': _0x3d98('0x18'),
+  'answers': [_0x3d98('0x7'), _0x3d98('0x18'), _0x3d98('0x8')]
+}];
 
 var qActive = document.querySelector('.question__box.active');
 var activeQuestion = {}
