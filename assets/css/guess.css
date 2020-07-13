@@ -92,6 +92,9 @@ button {
   background-size: cover;
   background-position: top center;
   position: relative; }
+  @media (orientation: landscape) {
+    .guess {
+      height: 100%; } }
 
 .game {
   width: 100%;
@@ -132,6 +135,11 @@ button {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+    @media (orientation: landscape) {
+      .game .welcome {
+        min-height: 100vh;
+        height: 100vh;
+        padding-top: 50px; } }
     .game .welcome.active {
       display: -webkit-box;
       display: -ms-flexbox;
