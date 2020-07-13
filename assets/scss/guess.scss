@@ -141,6 +141,10 @@ button {
   height: 100vh;
   position: relative;
 
+  @media (orientation: landscape) {
+    height: 100%;
+  }
+
   .logo {
     position: absolute;
     content: '';
