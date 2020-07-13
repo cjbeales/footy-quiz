@@ -135,11 +135,6 @@ button {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    @media (orientation: landscape) {
-      .game .welcome {
-        min-height: 100vh;
-        height: 100vh;
-        padding-top: 50px; } }
     .game .welcome.active {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -147,6 +142,11 @@ button {
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
+      @media (orientation: landscape) {
+        .game .welcome.active {
+          min-height: 100vh;
+          height: 100%;
+          padding-top: 50px; } }
     .game .welcome .welcome__container {
       max-width: 1200px;
       margin: 0 auto;

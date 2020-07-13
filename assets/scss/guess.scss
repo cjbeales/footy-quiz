@@ -182,15 +182,15 @@ button {
     color: #fff;
     @include transition(.3s);
 
-    @media (orientation: landscape) {
-      min-height: 100vh;
-      height: 100vh;
-      padding-top: 50px;
-    }
-
     &.active {
       display: flex;
       @include transition(.3s);
+
+      @media (orientation: landscape) {
+        min-height: 100vh;
+        height: 100%;
+        padding-top: 50px;
+      }
     }
 
     .welcome__container {
