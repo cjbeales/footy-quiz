@@ -145,6 +145,16 @@ button {
   min-height: 100vh;
   position: relative;
 
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+  }
+
   .logo {
     position: absolute;
     content: '';
@@ -407,6 +417,17 @@ button {
       height: 100%;
       opacity: 1;
       visibility: visible;
+      position: relative;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, .5);
     }
 
     .results__container {
