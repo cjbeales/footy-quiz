@@ -130,6 +130,7 @@ button {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     color: #fff;
     -webkit-transition: all 0.3s ease-in-out;
@@ -144,8 +145,6 @@ button {
       transition: all 0.3s ease-in-out; }
       @media (orientation: landscape) {
         .game .welcome.active {
-          min-height: 100vh;
-          height: 100%;
           padding-top: 50px; } }
     .game .welcome .welcome__container {
       max-width: 1200px;

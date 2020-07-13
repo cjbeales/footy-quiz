@@ -178,6 +178,7 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     color: #fff;
     @include transition(.3s);
@@ -187,8 +188,6 @@ button {
       @include transition(.3s);
 
       @media (orientation: landscape) {
-        min-height: 100vh;
-        height: 100%;
         padding-top: 50px;
       }
     }
