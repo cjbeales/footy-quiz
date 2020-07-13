@@ -142,12 +142,8 @@ button {
 
 .game {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-
-  @media (orientation: landscape) {
-    height: 100%;
-  }
 
   .logo {
     position: absolute;
@@ -179,7 +175,6 @@ button {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    height: 100%;
     color: #fff;
     @include transition(.3s);
 
