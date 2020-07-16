@@ -125,7 +125,7 @@ button {
       height: auto; }
       @media all and (max-width: 485px) {
         .game .logo img {
-          max-width: 115px; } }
+          max-width: 114px; } }
   .game .welcome {
     display: none;
     -webkit-box-pack: center;
